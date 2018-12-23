@@ -1,0 +1,249 @@
+<!DOCTYPE html><html><head><title>آشنایی با Symfony</title><meta charset="utf-8" /><meta content='text/html; charset=utf-8' http-equiv='Content-Type'><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'><meta property="og:locale" content="fa_IR" /><meta property="og:site_name" content="پول ریکوئست" /><meta name="twitter:image" content="/assets/images/pr.svg" /><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="theme-color" content="#000"><meta property="og:type" content="article" /><meta name="description" content="بین تعدا زیادی از تکنولوژی‌های وب که وجود دارن، پی‌اچ‌پی تو طول زمانی تغییرات سریعی رو پشت سر گذاشته و الان به یک زبان بالغ تبدیل شده. " /><meta property="og:description" content="بین تعدا زیادی از تکنولوژی‌های وب که وجود دارن، پی‌اچ‌پی تو طول زمانی تغییرات سریعی رو پشت سر گذاشته و الان به یک زبان بالغ تبدیل شده. " /><meta name="twitter:card" content="summary" /><meta name="twitter:description" content="بین تعدا زیادی از تکنولوژی‌های وب که وجود دارن، پی‌اچ‌پی تو طول زمانی تغییرات سریعی رو پشت سر گذاشته و الان به یک زبان بالغ تبدیل شده. " /><meta name="author" content="پول ریکوئست به قلم aien" /><meta property="og:title" content="آشنایی با Symfony" /><meta property="twitter:title" content="آشنایی با Symfony" /><link rel="stylesheet" type="text/css" href="/style.css" /><link rel="alternate" type="application/rss+xml" title="پول ریکوئست - پول ریکوئست، دست نوشته های فنی فارسی زبان" href="/feed.xml" /> <script src="/pr.js"></script><body><div class="site__container"><header class="site__header container"><figure class="site__header__brand"> <a href="http://pullrequest.ir"> <img src="/assets/images/pr.svg" alt="PR"> </a></figure><nav class="site__header__nav"><ul class="list--unstyled list--inline header__list text--center"><li> <a href="/about">پول ریکوئست چیست</a><li> <a href="/pr-authors">نویسندگان</a><li> <a href="/contribute">راهنمای انتشار مطالب در پول ریکوئست</a></ul></nav></header><hr class="site__header__divider container" /><main role="main" class="container"><article class="post post--single"><h1 class="post__title post__title--single">آشنایی با Symfony</h1><div class="post__info"> <span> <span class="lazyimage"> <img onload="window.pr.methods.addClass('img-loaded', this.parentNode)" onerror="window.pr.methods.addClass('img-error', this)" src="/assets/images/aien.jpg" alt="آیین سعیدی" class="img-rounded post__info__figure inline--middle" > </span> <span class="inline--middle post__author"><a href="http://pullrequest.ir/authors/aientech">آیین سعیدی</a></span> </span> <small><em>1396-4-22</em></small></div><div class="post__share text--left"><ul class="list--unstyled list--inline"><li><a class="button button--with-icon" target="_blank" href="https://twitter.com/intent/tweet?url=/%D8%B4%D8%B1.%D8%B9-%DA%A9%D8%A7%D8%B1-%D8%A8%D8%A7-%D9%BE%DB%8C-%D8%A7%DA%86-%D9%BE%DB%8C-%D9%88-%D8%B3%DB%8C%D9%85%D9%81%D9%88%D9%86%DB%8C/&via=http://pullrequest.ir&text=آشنایی با Symfony"> <i class="icon pricon-twitter"></i> توییتر </a><li><a class="button button--with-icon" target="_blank" href="https://telegram.me/share/url?url=http://pullrequest.ir/%D8%B4%D8%B1.%D8%B9-%DA%A9%D8%A7%D8%B1-%D8%A8%D8%A7-%D9%BE%DB%8C-%D8%A7%DA%86-%D9%BE%DB%8C-%D9%88-%D8%B3%DB%8C%D9%85%D9%81%D9%88%D9%86%DB%8C/"> <i class="icon pricon-telegram"></i> تلگرام </a></ul><nav class="post__tags post__tags--single"> <i class="icon pricon-tag"></i><ul class="list--unstyled list--inline"><li><a href="/tag/php">#PHP</a><li><a href="/tag/symofny">#Symofny</a><li><a href="/tag/beginning">#Beginning</a></ul></nav></div><div class="post__entry post__entry--single"><p>بین تعدا زیادی از تکنولوژی‌های وب که وجود دارن، پی‌اچ‌پی تو طول زمانی تغییرات سریعی رو پشت سر گذاشته و الان به یک زبان بالغ تبدیل شده.<p>پی‌اچ‌پی امروز هم برای وب‌سایت‌ها و وب‌اپلیکیشن‌ها کوچیک و همینطور بزرگ استفاده میشه و شاید یکی از دلایل محبوبیتش، سادگیش باشه.<p>با توجه به اینکه هرروز پیچیدگی وب‌اپلیکیشن‌ها بیشتر میشه، برنامه‌نویس‌ها بیشتر به استفاده از فریم‌ورک‌ها رو آوردن و حتی برای پروژه‌های کوچیکشون هم از اونا استفاده می‌کنن. شاید با خودتون بگید «فریم‌ورک چیه؟». فریم‌ورک‌ها اساسا چیزی بجز یکسری توابع و ساختاربندی‌های کلاسی نیستن که از قبل آماده شدن و قابل استفاده هستن، که مهمترین ویژگیشون <em>اختراع نکردن چرخ از اول</em> هست و این یعنی <em>صرفه‌جویی زمان</em>.<p>تقریبا تمام زبان‌های برنامه‌نویسی برای خودشون فریم‌ورک‌هایی رو دارن که هرکدوم با هدفی ساخته شدن. یسری از فریم‌ورک‌های محبوب پی‌اچ‌پی، Zend Framework, Cake PHP, Smarty, Laravel و Symfony هستند، و من خودم بشخصه طرفدار سیمفونی هستم و دلایلش رو هم میگم. در نهایت سعی میکنم برای کسانی که دوست دارن با سیمفونی آشنا بشن، توضیحی از نحوه نصب و راه‌اندازی و کار مختصر باهاش رو توضیح بدم.<h2 id="انعطافپذیری">انعطاف‌پذیری</h2><p>تو خیلی از پروژه‌هایی که کار کردم و دیدم، سیمفونی بهم ثابت کرد که خیلی زیاد انعطاف‌پذیره و یک انتخاب خوب برای کسب‌وکار. با قابلیت‌هایی مثل Dependency Injectorها یا Event Dispatcherها کاملا قابل تنظیم و شخصی‌سازی شده. سیمفونی یک ساختار OOP و SOA رو به صورت حرفه‌ای پیش برده که باعث شده برای کسایی که بخوان چه از ساختار Monolithic و چه از Micro Service بهره ببرن، گزینه‌ی مناسبی باشه، و این یعنی توسعه سریع، افزایش مقیاس پروژه و نگهداری راحت.<p>برنامه‌نویس‌ها نیازی ندارن تا ویژگی‌های پایه و اساسی پروژه رو از اول بنویسن یا حتی بازنویسی کنن، مثل سرویس مدیرت فرم. سیمفونی برنامه‌نویس رو به چالش واقعی دعوت میکنه، محاسبات و مدیریت. بنظرم یکی از بهترین ویژگی‌های سیمفونی داشتن Web Debug Toolbar هست که حقیقتا یه دوست واقعی برای برنامه‌نویسه.<h2 id="ساختار-تیکه-تیکه-باندل">ساختار تیکه تیکه! (باندل)</h2><p>بنظرم یکی از ویژگی‌های بسیار مثبت سیمفونی، ساختار تیکه تیکش هست. یعنی سیمفونی از اجزای کوچکتر ساخته شده که هرکدومشون جداگانه قابل استفاده هستن، یک نمونش HTTP Foundation که خیلی زیاد تو لاراول استفاده شده. در واقع خود سیمفونی، یک تیکه کوچیک از این تیکه‌هاست که در حقیقت وظیفش جمع کردن همه‌ی تیکه‌ها (اسم درستشون باندل هست) و در کنار هم قراردادنشونه. برای همین سیمفونی رو میشه به دو حالت استفاده کرد:<ol><li>یک فریم‌ورک کامل: کل ابزارهای سیمفونی و یک عالمه ابزاری که برنامه‌نویس‌های دیگه نوشتن رو کنار هم و یکجا داشته باشید<li>میکرو فریم‌ورک‌ها: که درواقع شما توی پروژه‌ای که کار میکنید، بدون نصب سیمفونی، فقط از باندل‌های بدرد بخورش براش خودتون استفاده کنید، مثل FormBundle</ol><h2 id="twig">TWIG!</h2><p>الان تو دنیایی هستیم که کمتر کسی علاقه‌ای به نوشتن ظاهر سایت و HTML بصورت دستی داره، بخصوص زمانی که تعداد فایلها قراره زیاد بشن و شما مجبور بشید به ازای هر صفحه یه فایل جدید بسازید. توییگ، یه موتور ساخت قالب هست که بهتون کمک خیلی زیادی توی طراحی میکنه. مثلا شما میتونید یک فایل html بسازید و داخلش از توییگ استفاده کنید و فقط متغیرها رو بهش پاس بدید. و اون برای شما به سادگی و سریع رندر کنه. سیمفونی به صورت پیشفرض از توییگ پشتیبانی میکنه و خیلی از زمان طراحی شما کم میکنه.<h2 id="داکترین-doctrine">داکترین (Doctrine)</h2><p>داکترین در واقع یک سری کتابخونه برای php هست که وظیفش ایجاد یک لایه‌ی اضافی برای ارتباط برنامه‌نویس با دیتابیسه، در حقیقت به جای اینکه برنامه‌نویس مجبور بشه کدهای sql رو دستی وارد کنه، با نصب داکترین، فقط به کدهای php بسنده میکنه و داکترین تمام کارهارو براش انجام میده.<p>داکترین تبدیل به یک پروژه بالغ شده و بنظرم تمام امکانات مورد نیاز برنامه‌نویس رو در اختیارش قرار میده. خود داکترین شاخه‌های زیرمجموعه داره که مهمترین و پرمصرف‌ترینش Doctrin ORM هست که وظیفش بصورت ساده و خلاصه، تبدیل کلاس‌های php به مدل‌های دیتابیسی هست.<p>سیمفونی بطور پیشفرض از Doctrine ORM پشتیبانی میکنه و نیازی نیست شما اون رو کانفیگ کنید.<h2 id="تست-راحت">تست راحت</h2><p>بنظرم سیمفونی با ایده‌ی «تستینگ در اولویت» پیش رفته. Unit Testingها با استفاده از PHPUnit خیلی خوب از کدها جدا شدن مدیریتشون خیلی راحت شده. با یه کمک خیلی زیاد از PHPUnit این امکان برای برنامه‌نویس وجود داره تا به سادگی درخواست‌های http رو بازسازی، آزمایش و تست کنه بدون اینکه مجبور باشه کد زیادی رو با ابزار تست بزنه. در واقع این امکان سیمفونی حتی زمان زیادی رو هم توی تست حفظ میکنه و سرعت عمل رو بالا میبره. در مجموع اکوسیستم سیمفونی روی تستینگ و کیفیت بالای اون خیلی تمرکز داشته و موارد خوبی رو فراهم کرده.<h2 id="دیباگ-مثل-آب-خوردن">دیباگ مثل آب خوردن</h2><p>محبوبترین ویژگی سیمفونی، Web Debug Tool هست که اطلاعات کاملی و دقیقی راجع به وضعیت فعلی درخواست‌ها، ترنسپایلر‌ها و غیره میده و حتی امکان تست سرعت رندر هم داره. Symfony Profiler همون ابزار دیباگینگ هست که در مورد تمام اتفاقات پروژه تو هر مرحله گزارش کامل و دقیق میده.<h1 id="نصب-سیمفونی">نصب سیمفونی</h1><p>حتما براتون سوال شده که چطور میشه سیمفونی رو نصب و راه‌اندازی کرد. برای اینکار روش‌های مختلی وجود داره، اما بهترین روش که من هم ازش استفاده میکردم و راضی بودم، استفاده از نصاب خود سیمفونی هست که برای راه‌اندازیش میتونید به شکل زیر عمل کنید:<ol><li><p>دریافت فایل نصاب<p><em>برای لینوکس و مک</em><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo curl -LsS https://symfony.com/installer -o /usr/bin/symfony
+ sudo chmod a+x /usr/bin/symfony
+</code></pre></div></div><p><em>برای ویندوز</em><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  C:\&gt; php -r "readfile('https://symfony.com/installer');" &gt; symfony
+</code></pre></div></div><li><p>استفاده از نصاب<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> symfony new helloWorld lts
+</code></pre></div></div></ol><p><strong>حتما مطمئن باشد که از PHP Phar Extension استفاده میکنید!</strong><ol><li>نصب Composer کامپوزر، در حقیقت یک Package Manager هست که پکیج‌هایی که تو ریپازیتوری کامپوزر وجود دارن رو براتون پیدا و بهترین رو از لحاظ مطابقت با ورژن‌های شما نصب میکنه. کامپوزر رو میتونید به سادگی از ریپازیتوری‌های توزیع لینوکستون پیدا کنید. مثلا<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo packman -S composer
+</code></pre></div></div><p>یا<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install composer
+</code></pre></div></div><li>راه اندازی سرور و ادامه کد زدن</ol><p>دایرکتوریتون رو به فولدر helloWorld تغییر بدبد<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd helloWorld
+</code></pre></div></div><p>و سرور داخلی سیمفونی رو اجرا کنید:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/console server:run
+</code></pre></div></div><h1 id="گام-به-گام-با-هم-پیش-بریم">گام به گام با هم پیش بریم</h1><p>بیاید باهم یه وب‌سایت ساده بنویسیم. فکر میکنم یه وبلاگ میتونه گزینه مناسبی برای شروع باشه. پس اگر هنوز نصاب سیمفونی و کامپوزر رو نصب نکردید، برگردید عقب و انجامشون بدید تا در ادامه مشکلی نداشته باشید.<h2 id="قدم-اول-راه-اندازی-پروژه">قدم اول، راه اندازی پروژه</h2><div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>symfony new MyBlog lts
+</code></pre></div></div><p>پس از اجرا، باید همچین پاسخی رو دریافت کنید:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Downloading Symfony...
+
+    5.4 MiB/5.4 MiB ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  100%
+
+ Preparing project...
+
+   Symfony 2.8.24 was successfully installed. Now you can:
+
+    * Change your current directory to ~/MyBlog
+
+    * Configure your application in app/config/parameters.yml file.
+
+    * Run your application:
+        1. Execute the php app/console server:start command.
+        2. Browse to the http://localhost:8000 URL.
+
+    * Read the documentation at http://symfony.com/doc
+</code></pre></div></div><p>و در نهایت دستور <code class="highlighter-rouge">composer install</code> رو داخل فولدر MyBlog اجرا کنید.<p>حالا IDE یا ادیتورتون رو باز کنید و پروژه رو داخلش بیارید بالا.<h3 id="تنظیمات-دیتابیس">تنظیمات دیتابیس</h3><p>تمام تنظیمات پروژه، داخل فولدر <code class="highlighter-rouge">app/config</code> قرار میگیرن. فولدر <code class="highlighter-rouge">app</code> موظف به نگهداری از تمام منابع اپلیکیشن هست، مثل قالب‌های توییگ، لاگ‌ها و تنظیمات و هسته اپلیکیشن.<p>فایلهایی که داخل پوشه <code class="highlighter-rouge">app/config</code> هستن، معمولا با پسوند <code class="highlighter-rouge">.yml</code> یا <code class="highlighter-rouge">.yaml</code> قرار میگیرن که میتونم بگم از لحاظ کاربری مشابه <code class="highlighter-rouge">.json</code> هستن.<p>حالا فایل <code class="highlighter-rouge">app/config/parameters.yml</code> رو باز کنید. با همچین ساختاری مواجه میشید:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: symfony
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 90830183902924603f797e4b794ff7e8353e43e9
+</code></pre></div></div><p>تیکه اول درواقع تنظیمات عمومی اپ برای ارتباط با دیتابیس هست. این تنظیمات رو به:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>database_name: MyBlog #یا هر اسم دیگه‌ای که برای دیتابیس دوست دارید
+database_user: root #یوزرنیم که باهاش به دیتابیس وصل میشید
+database_password: null #پسورد دیتابیستون...
+</code></pre></div></div><p>تغییر بدید. من در حالت عادی با MySql کار میکنم، اما سیمفونی گزینه‌های دیگه‌ای هم مثل MongoDb و دیتابیس‌های دیگه داره و از اونا پشتیبانی میکنه.<h4 id="ساخت-دیتابیس">ساخت دیتابیس</h4><p>یکی از گزینه‌های خیلی خوب سیمفونی که من دوست دارم، کنسولش هست. که خیلی از کارهارو برای شما انجام میده. میتونید اطلاعات بیشتری راجع بهش رو صرفا با تایپ <code class="highlighter-rouge">app/console</code> بدست بیارید.<p>الان فقط ساخت دیتابیس برامون کافیه تا بریم مراحل بعدی:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/console doctrine:database:create
+</code></pre></div></div><p>و پاسخش:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Created database `MyBlog` for connection named default
+</code></pre></div></div><p>حالا چک کنیم که تا اینجا همه‌چیز خوب پیشرفته:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/console server:run
+
+[OK] Server running on http://127.0.0.1:8000
+
+// Quit the server with CONTROL-C.
+</code></pre></div></div><p>میتونید صفحه رو باز کنید و چک کنید. نوار سیاه پایین صفحه، همون Web Debug Tool هست که گفته بودم. بعد از اینکه مطمئن شدید اوضاع خوبه، پروسه رو قطع میکنیم و میریم گام بعدی.<h2 id="ساخت-یک-باندل-برای-مدیریت-وبلاگ">ساخت یک باندل برای مدیریت وبلاگ</h2><p>یک نکته مهم، از اونجایی که سیمفونی ساختار تیکه تیکه داره (Bundle) شما میتونید هر قسمتی از سایت رو بر اساس ساختار خودتون به یک باندل تبدیل کنید. مثلا فرض میکنیم که وبلاگ سایت، برای خودش یه تیکه جداست، یعنی میتونیم خیلی راحت از پروژه حذفش کنیم و دیگه کاربرا بلاگی نبینن. برای اینکار، یه باندل جدید میسازیم:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/console generate:bundle
+
+                                            
+  Welcome to the Symfony bundle generator!  
+                                            
+
+Are you planning on sharing this bundle across multiple applications? [no]: 
+
+Your application code must be written in bundles. This command helps
+you generate them easily.
+
+Give your bundle a descriptive name, like BlogBundle.
+Bundle name: MyBlogBundle
+
+Bundles are usually generated into the src/ directory. Unless you're
+doing something custom, hit enter to keep this default!
+
+Target Directory [src/]: 
+
+What format do you want to use for your generated configuration?
+
+Configuration format (annotation, yml, xml, php) [annotation]: 
+
+                     
+  Bundle generation  
+                     
+
+&gt; Generating a sample bundle skeleton into app/../src/MyBlogBundle
+  created ./app/../src/MyBlogBundle/
+  created ./app/../src/MyBlogBundle/MyBlogBundle.php
+  created ./app/../src/MyBlogBundle/Controller/
+  created ./app/../src/MyBlogBundle/Controller/DefaultController.php
+  created ./app/../tests/MyBlogBundle/Controller/
+  created ./app/../tests/MyBlogBundle/Controller/DefaultControllerTest.php
+  created ./app/../src/MyBlogBundle/Resources/views/Default/
+  created ./app/../src/MyBlogBundle/Resources/views/Default/index.html.twig
+  created ./app/../src/MyBlogBundle/Resources/config/
+  created ./app/../src/MyBlogBundle/Resources/config/services.yml
+&gt; Checking that the bundle is autoloaded
+&gt; Enabling the bundle inside app/AppKernel.php
+  updated ./app/AppKernel.php
+&gt; Importing the bundle's routes from the app/config/routing.yml file
+  updated ./app/config/routing.yml
+&gt; Importing the bundle's services.yml from the app/config/config.yml file
+  updated ./app/config/config.yml
+
+                                         
+  Everything is OK! Now get to work :).
+</code></pre></div></div><p>سوال اول اینه:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Are you planning on sharing this bundle across multiple applications? [no]
+</code></pre></div></div><p>که اگر جوابتون <code class="highlighter-rouge">yes</code> باشه، تمام فایلهای باندل، مثل قالب‌ها، تنظیمات و غیره رو توی خود فولدر باندل میریزه که شما بتونید راحت جداش کنید. در غیر این صورت، قالب‌ها داخل فولدر <code class="highlighter-rouge">app/Resources/views</code> ریخته میشن. (که عملا جدا کردنشون کار سختی میشه…)<p>برای ادامه آموزشمون، میتونید این گزینه رو همینطور رها کنید (اینتر بزنید) و بریم سراغ سوال بعدی:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Bundle name: MyBlogBundle
+</code></pre></div></div><p>این اسم، ارتباطی با اسم پروژه نداره، یهو به ذهنم رسید، شما میتونید از <code class="highlighter-rouge">BlogBundle</code> یا <code class="highlighter-rouge">HaminjuriBundle</code> استفاده کنید… مهم اینه که حتما کلمه <code class="highlighter-rouge">Bundle</code> به آخرش، به صورت CamelCase اضافه بشه. سوال بعدی این خواهد بود:<p><code class="highlighter-rouge">Target Directory [src/]:</code><p>تمام باندل‌های سایت شما (مگر زمانی که خودتون کانفیگ کنید) داخل فولدر <code class="highlighter-rouge">src</code> ریخته میشن، درواقع شما ۹۹٪ زمانتون رو تو این فولدر صرف میکنید. ماهم این گزینه رو به حال خودش رها میکنیم.<p><code class="highlighter-rouge">Configuration format (annotation, yml, xml, php) [annotation]</code><p>نوع تنظیماتی که باندل قرار داشته باشه چطوره، میتونید از هر نوعی که گفته استفاده کنید ولی من annotation رو ترجیح میدم چون خیلی راحت میشه تغییرش داد و مدیریتش خیلی آسونتر هست. پس فقط اینتر رو میزنم و میرم سراغ گام بعدی!<h2 id="ساخت-یک-مدل-ساده-از-پست-وبلاگ">ساخت یک مدل ساده از پست وبلاگ</h2><p>خب، تا اینجا خوب پیشرفتیم. فرض میکنیم کاربرای ما، نیازی به مدلسازی پیچیده‌ای ندارن و در حد ساده‌ی آموزش ما براشون کافیه. یک پست وبلاگ چه چیزا‌هایی احتیاج داره؟<ul><li><em>عنوان</em> (title) از نوع رشته‌ای (string) که حتما باید وارد بشه (not nullable) و نباید تکراری باشه (unique)<li><em>متن نوشته</em> (content) از نوع متنی (text) که حتما باید وارد بشه (not nullable)<li><em>تاریخ ساخت</em> (createdAt) از نوع تاریخ (data) که حتما باید وارد بشه (not nullable)</ul><p>دوباره میریم سراغ کنسول:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/console doctrine:generate:entity
+
+                                             
+  Welcome to the Doctrine2 entity generator  
+                                             
+
+
+This command helps you generate Doctrine2 entities.
+
+First, you need to give the entity name you want to generate.
+You must use the shortcut notation like AcmeBlogBundle:Post.
+
+The Entity shortcut name: BlogBundle:Post
+</code></pre></div></div><p>اینجا بهش میگیم که این انتیتی (entity)، یا همون مدلمون، مربوط به کدوم باندل هست. اسم باندل که باهم درست کردیم دو نقطه اسم انتیتی که میشه پست…<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Configuration format (yml, xml, php, or annotation) [annotation]
+</code></pre></div></div><p>همچنان با انوتیشن پیش میریم. از اینجا به بعد ازتون میخواد که پراپرتی‌های مدل رو مشخص کنید. زمانی که کارتون تموم شد، میتونید اینتر رو بزنید و ادامه رو به کنسول بسپارید. پس پیش میریم:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>New field name (press &lt;return&gt; to stop adding fields): title
+Field type [string]: 
+Field length [255]: 
+Is nullable [false]: 
+Unique [false]: true
+
+New field name (press &lt;return&gt; to stop adding fields): content
+Field type [string]: text
+Is nullable [false]: 
+Unique [false]: 
+
+New field name (press &lt;return&gt; to stop adding fields): createdAt
+Field type [string]: date
+Is nullable [false]: 
+Unique [false]: 
+
+New field name (press &lt;return&gt; to stop adding fields): 
+
+                     
+  Entity generation  
+                     
+
+  created ./src/BlogBundle/Entity/
+  created ./src/BlogBundle/Entity/Post.php
+&gt; Generating entity class src/BlogBundle/Entity/Post.php: OK!
+&gt; Generating repository class src/BlogBundle/Repository/PostRepository.php: OK!
+
+                                         
+  Everything is OK! Now get to work :).
+</code></pre></div></div><p>حالا اگر برید داخل <code class="highlighter-rouge">src/BlogBundle/Entity</code> متوجه میشید که فایل <code class="highlighter-rouge">Post.php</code> براتون ساخته شده. این فایل در واقع یه کلاس ساده PHP هست که صرفا پراپرتی‌های مدل رو نگه‌داری میکنه. در واقع این همون مدل پست ماست که میتونید بعدا خیلی راحت تغییرش بدید.<p>ضمنا همزمان با ساخت این مدل، یک فایل هم داخل <code class="highlighter-rouge">src/BlogBundle/Repository</code> به نام <code class="highlighter-rouge">PostRepository.php</code> ساخته شده، که در واقع وظیفه اصلیش اینه:<p>یک جاهایی از پروژه شما نیاز پیدا میکنید تا مثلا یک رکورد خاص رو از دیتابیس، با محاسبات خاصی دریافت کنید. اینجا میتونید تمام دستورات لازم رو بنویسید تا همه‌جا بشه به سادگی ازشون استفاده کرد.<p>حالا که مدل ساخته شد، اون رو به دیتابیس منتقل میکنیم تا ساختار دیتابیس با مدل‌های ما یکی بشه:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/console doctrine:schema:update --force
+Updating database schema...
+Database schema updated successfully! "1" queries were executed
+</code></pre></div></div><p>چرا از آرگومان <code class="highlighter-rouge">--force</code> استفاده کردیم؟ یک دلیلش اینه که مطمئن باشیم داریم درست پیش میریم. پیش میاد زمانی که احتمالا دستور رو اشتباه وارد کنیم و باعث بشیم تا دیتابیس بهم بریزه. مورد بعدی اینکه شما میتونید از آرگومان <code class="highlighter-rouge">--dump-sql</code> هم استفاده کنید تا ببینید دقیقا چه دستوری به SQL اجرا میشه.<h2 id="ساخت-فرم-برای-مدیریت-پستها">ساخت فرم برای مدیریت پست‌ها</h2><p>تا اینجا خوب پیشرفتیم. حالا باید این امکان رو برای کاربر فراهم کنیم، تا بتونه پست‌ها رو کراد (CRUD = Create, Read, Update and Delete) کنه. خوبی سیمفونی اینه که تقریبا تمام این کارها رو با کنسول میشه انجام داد. پس:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/console doctrine:generate:crud
+
+                                           
+  Welcome to the Doctrine2 CRUD generator  
+                                           
+
+
+This command helps you generate CRUD controllers and templates.
+
+First, give the name of the existing entity for which you want to generate a CRUD
+(use the shortcut notation like AcmeBlogBundle:Post)
+
+The Entity shortcut name: BlogBundle:Post
+
+By default, the generator creates two actions: list and show.
+You can also ask it to generate "write" actions: new, update, and delete.
+
+Do you want to generate the "write" actions [no]? yes
+
+Determine the format to use for the generated CRUD.
+
+Configuration format (yml, xml, php, or annotation) [annotation]: 
+
+Determine the routes prefix (all the routes will be "mounted" under this
+prefix: /prefix/, /prefix/new, ...).
+
+Routes prefix [/post]: /blog
+
+                             
+  Summary before generation  
+                             
+
+You are going to generate a CRUD controller for "BlogBundle:Post"
+using the "annotation" format.
+
+Do you confirm generation [yes]? 
+
+                   
+  CRUD generation  
+                   
+
+  created ./src/BlogBundle/Controller//PostController.php
+  created ./app/Resources/views/post/
+  created ./app/Resources/views/post/index.html.twig
+  created ./app/Resources/views/post/show.html.twig
+  created ./app/Resources/views/post/new.html.twig
+  created ./app/Resources/views/post/edit.html.twig
+  created ./src/BlogBundle/Tests/Controller/
+  created ./src/BlogBundle/Tests/Controller//PostControllerTest.php
+Generating the CRUD code: OK
+  created ./src/BlogBundle/Form/
+  created ./src/BlogBundle/Form/PostType.php
+Generating the Form code: OK
+Updating the routing: OK
+
+                                         
+  Everything is OK! Now get to work :).
+</code></pre></div></div><p>بذارید مرحله به مرحله توضیح بدم. اول دستور <code class="highlighter-rouge">app/console doctrine:generate:crud</code> رو زدم. بعد ازم پرسید که برای چه انتیتی میخوام کراد بسازم و من هم <code class="highlighter-rouge">BlogBundle:Post</code> رو وارد کردم. بعد ازم پرسید که پیشوند مسیرم برای کاربر چیه، در واقع کاربر از چه مسیری توی سایت میتونه به این عملیات‌ها دسترسی داشته باشه. خودش بصورت پیشفرض، اسم انتیتی (Post) رو در نظر گرفته بود و من به <code class="highlighter-rouge">/blog</code> تغییرش دادم. و در نهایت پرسید که آیا مطمئن هستم؟ و منم مطمئنم…<p>خب، حالا یه تست کنیم ببینیم تا اینجا چطور پیشرفتیم:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/console cache:clear
+app/console server:run
+</code></pre></div></div><p>از این آدرس استفاده کنید تا بتونید بهتر ببینید:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://localhost:8000/app_dev.php/blog/
+</code></pre></div></div><p><code class="highlighter-rouge">app_dev.php</code> در واقع محیط دیباگ رو فراهم میکنه. اگر واردش نکنید، سایت اصلی بدون گزینه‌های دیباگ و پولیش شده جلوتون قرار میگیره.<p>تا اینجا عالی بود. پیشنهاد میکنم یکم با این صفحه کار کنید و چندتا پست نمونه بسازید، پاکشون کنید و تغییرشون بدید. چقدر راحت شد همه‌چیز.<p>ولی ظاهرش اصلا قشنگ نیست… قدم بعدیمون، میریم سراغ یکم طراحی…<h2 id="یکم-کار-با-قالبها">یکم کار با قالب‌ها</h2><p>تمام قالب‌های مربوط به کراد، با توجه به اینکه قرار نیست ما این باندل رو جدا کنیم، تو فولدر <code class="highlighter-rouge">app/Resources/views/post</code> قرار گرفتن. از اسم فایل‌ها مشخصه که هر کدوم چه وظیفه‌ای به عهده دارن. پسوندشون هم <code class="highlighter-rouge">.html.twig</code> هست که درواقع یک فایل توییگه که باهاش به شکل فایل html برخورد میشه.<p>### <code class="highlighter-rouge">index.html.twig</code><p>اگر به فایل <code class="highlighter-rouge">src/BlogBundle/Controller/PostController.php</code> نگاه کنید، که بعد از اجرای دستور <code class="highlighter-rouge">doctrine:generate:crud</code> ایجاد شده، متوجه میشید که تمام عملیات کراد اینجا انجام میشه.<p>کنترلرها در واقع کلاس‌هایی هستن که وظیفشون مدیریت فعالیت‌های قسمت‌های مختلف باندل یا مسیرهای اوناست. اینو رو ببینید:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/**
+* Lists all post entities.
+*
+* @Route("/", name="blog_index")
+* @Method("GET")
+*/
+public function indexAction()
+{
+    $em = $this-&gt;getDoctrine()-&gt;getManager();
+
+    $posts = $em-&gt;getRepository('BlogBundle:Post')-&gt;findAll();
+
+    return $this-&gt;render('post/index.html.twig', array(
+        'posts' =&gt; $posts,
+    ));
+}
+</code></pre></div></div><p>چون تعریف کردیم که تظیمات رو با انوتیشن انجام میدیم، تمام تعاریف اکشن‌ها (یا همون تیکه‌های کوچیک که وظیفه مدیریت قسمت‌های مختلف باندل رو دارن وکنترلر اونارو یجا جمع کرده) بالاشون، انوتیت میشن.<p>مثلا اینجا به <code class="highlighter-rouge">@Route</code> دقت کنید، آرگومان اولش <code class="highlighter-rouge">/</code> هست، یعنی <code class="highlighter-rouge">مسیرباندل/مسیر کنترلر/مسیر اکشن</code> که اینجا برای ما میشه <code class="highlighter-rouge">/blog/</code>. دقت کنید که خود باندل بلاگ، مسیری رو نداره، و ما زمان ساخت فرم گفتیم که پیشوند مسیر رو از <code class="highlighter-rouge">/post</code> به <code class="highlighter-rouge">/blog</code> تغییر بده. اگر دوست داشتید که مسیر باندل رو هم عوض کنید، فایل <code class="highlighter-rouge">app/config/routing.yml</code> رو باز کنید و <code class="highlighter-rouge">prefix</code> باندل رو از <code class="highlighter-rouge">/</code> به هرچی که دوست دارید، مثلا <code class="highlighter-rouge">hello</code> تغییر بدید. در نتیجه این تغییر، کاربر شما برای دریافت لیست پست‌ها باید به آدرس <code class="highlighter-rouge">hello/blog/</code> مراجعه کنه.<p>خب، برمیگردیم به خود کد و اون رو مرور میکنیم. <code class="highlighter-rouge">$em</code> درواقع انتیتی منیجر داکترین تعریف شده. وقتی ما این کلاس رو از <code class="highlighter-rouge">Symfony\Bundle\FrameworkBundle\Controller\Controller</code> اکستند کردیم، امکاناتی مثل <code class="highlighter-rouge">getDoctrine()</code> به <code class="highlighter-rouge">$this</code> اضافه شده.<p>بعد اومده و لیست تمام رکورد‌های موجود توی جدول پست رو گرفته، و در نهایت فایل <code class="highlighter-rouge">app/Resources/views/post/index.html.twig</code> رو رندر کرده و پست‌ها رو پاس داده بهش.<p>حالا بریم سراغ فایل <code class="highlighter-rouge">app/Resources/views/post/index.html.twig</code>. تو خط اولش متوجه میشیم که <img src="https://image.ibb.co/bRRfx5/Screenshot_from_2017_07_24_19_06_32.png" alt="" /> اجرا میشه، یعنی، این فایل ما یک بخشی از فایل اصلی <code class="highlighter-rouge">base.html.twig</code> هست که تو پوشه <code class="highlighter-rouge">app/Resources/views/base.html.twig</code> قرار گرفته.<p>شما با تغییر دادن این فایل میتونید ظاهر سایت رو عوض کنید. مثلا من بالای <code class="highlighter-rouge">base.html.twig</code> میخوام اسم سایت رو اضافه کنم. فایلش رو باز میکنم و:<p><img src="https://preview.ibb.co/eiwPPk/Screenshot_from_2017_07_24_19_09_41.png" alt="" /><p>حالا بالای صفحه یه هدر دارم و پایین هم یه فوتر. یه استایل ساده رو داخل فولدر <code class="highlighter-rouge">web/style.css</code> میذارم و اینا رو داخلش اضافه میکنم:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>body {
+    font-family: sans;
+}
+
+.header {
+    margin: 15px;
+    background-color: #eee;
+}
+
+.footer {
+    margin: 15px;
+    border: 1px solid #ccc;
+}
+</code></pre></div></div><p>و در نهایت به <code class="highlighter-rouge">base.html.twig</code> میگم که این فایل رو بیاره و تو صفحه‌ها نمایش بده:<p><img src="https://preview.ibb.co/dArkVQ/Screenshot_from_2017_07_24_19_11_36.png" alt="" /><p>دستورات توییگ با <code class="highlighter-rouge">{ { } }</code> (بدون فاصله) اجرا میشن. و <code class="highlighter-rouge">asset('...')</code> میره و هرچیزی که داخل فولدر <code class="highlighter-rouge">web</code> بود رو برای شما با اون اسم میاره. دیگه نیازی نیست نگران آدرس فایل‌ها باشید!<p>حالا میخوام جدولی که توی فایل <code class="highlighter-rouge">app/Resources/views/post/index.html.twig</code> بود رو یکم قشنگتر کنم، یه فایل <code class="highlighter-rouge">table.css</code> توی <code class="highlighter-rouge">web</code> میسازم و اینارو داخل مینویسم:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+</code></pre></div></div><p>و بعد، میخوام هرموقع که کاربر صفحه ایندکس پست‌ها (<code class="highlighter-rouge">indexAction</code>) رو باز میکنه، این استایل نمایش داده بشه. برای اینکار، فایل <code class="highlighter-rouge">post/index.html.twig</code> رو باز میکنم و:<p><img src="https://preview.ibb.co/iYhaVQ/Screenshot_from_2017_07_24_19_12_57.png" alt="" /><p>کارمون تموم شد. یه تست میکنیم:<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app/console cache:clear
+app/console server:run
+</code></pre></div></div><p>حالا صفحه پست‌ها رو باز کنید و ببینید چه اتفاقی افتاد…<p>خب ما باهم تونستیم یه وب‌سایت خیلی ساده رو درست کنیم و تقریبا هیچ کدی نزنیم. سیمفونی هنوز مونده و خیلی خیلی جا برای یادگیری داره، اما بنظرم شروع خوبی داشتیم و قطعا خودتون میتونید از اینجا به بعد رو تنهایی پیش برید.<p>پیشنهاد میکنم حتما سری به سایت <a href="http://symfony.com/">سیمفونی</a>، سایت <a href="http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/">آموزش داکترین</a> و <a href="https://twig.symfony.com/doc/2.x/">توییگ</a> بزنید تا باهاشون بیشتر آشنا بشید.<p>با آرزوی موفقیت روزافزون برای شما</div><div class="post__share text--center"><ul class="list--unstyled list--inline"><li><a class="button button--with-icon" target="_blank" href="https://twitter.com/intent/tweet?url=/%D8%B4%D8%B1.%D8%B9-%DA%A9%D8%A7%D8%B1-%D8%A8%D8%A7-%D9%BE%DB%8C-%D8%A7%DA%86-%D9%BE%DB%8C-%D9%88-%D8%B3%DB%8C%D9%85%D9%81%D9%88%D9%86%DB%8C/&via=http://pullrequest.ir&text=آشنایی با Symfony"> <i class="icon pricon-twitter"></i> توییتر </a><li><a class="button button--with-icon" target="_blank" href="https://telegram.me/share/url?url=http://pullrequest.ir/%D8%B4%D8%B1.%D8%B9-%DA%A9%D8%A7%D8%B1-%D8%A8%D8%A7-%D9%BE%DB%8C-%D8%A7%DA%86-%D9%BE%DB%8C-%D9%88-%D8%B3%DB%8C%D9%85%D9%81%D9%88%D9%86%DB%8C/"> <i class="icon pricon-telegram"></i> تلگرام </a></ul></div><script> window.pr.methods.docReady(function() { var singleEntry = window.pr.methods.selectElementByClassName('.post__entry--single'); var excerptEntry = window.pr.methods.selectElementByClassName('.post__excerpt'); if (singleEntry) window.pr.methods.parseTextForEmojis(singleEntry); else if (excerptEntry) window.pr.methods.parseTextForEmojis(excerptEntry); }) </script><hr /><div class="comments"><div id="disqus_thread"></div><script async defer src='https://pwl-rykhwyst.disqus.com/embed.js' onerror="disqusHandler();"></script> <script type="text/javascript"> var disqusHandler = (function (w) { var methods = w.pr.methods; /* methods.docReady(function () { loadDisqusScript() }); function loadDisqusScript() { methods.getAjax('https://pwl-rykhwyst.disqus.com/embed.js', null, function (e) { addDisqusErrorIfNotPresent(); // Parse any emoji inside error methods.parseTextForEmojis(document.getElementById('comment__error')); }) } */ function addDisqusErrorIfNotPresent() { var comments = methods.selectElementByClassName('.comments'); /* Add only for the 1st time */ if (!methods.selectElementById('comment__error')) { /* Add error to .comments */ comments.appendChild(createDisqusError()); /* Parse any emoji inside error */ methods.parseTextForEmojis(document.getElementById('comment__error')); } } function createDisqusError() { var err = document.createElement('div'); err.id = 'comment__error'; window.pr.methods.addClass('alert', err); err.innerHTML = 'اگر این پیام رو میبینین، به این معنیه که اسکریپت Disqus براتون لود نشده. سرویس Disqus توی ایران فیلتر شده!! <strong>لطفا وی پی ان تون رو روشن کنین و صفحه فعلی رو ریفرش کنین.</strong> :پی'; return err; } return addDisqusErrorIfNotPresent; })(window); </script> <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div></article></div><footer class="site__footer clearfix"><div class="site__footer__brand" onclick="window.pr.methods.goToTop()"> <img class="img-block" src="/assets/images/pr.svg" alt="PR"></div><div class="container clearfix"><nav class="pull-right site__footer__menu"><ul class="list--unstyled list--inline site__footer__list"><li> <a target="_blank" href="https://github.com/pr-techblog"> <i class="icon pricon-github"></i> گیتهاب </a><li> <a target="_blank" href="https://twitter.com/pr_techblog"> <i class="icon pricon-twitter"></i> توییتر </a></ul></nav><div class="pull-left text--ltr site__footer__copyright">Made with ❦ @ <strong>PullRequest</strong></div></div></footer></div><script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-93910742-1', 'auto'); ga('send', 'pageview', { 'page': '/%D8%B4%D8%B1.%D8%B9-%DA%A9%D8%A7%D8%B1-%D8%A8%D8%A7-%D9%BE%DB%8C-%D8%A7%DA%86-%D9%BE%DB%8C-%D9%88-%D8%B3%DB%8C%D9%85%D9%81%D9%88%D9%86%DB%8C/', 'title': 'آشنایی با Symfony' }); </script>
